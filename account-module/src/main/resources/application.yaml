@@ -1,0 +1,23 @@
+server:
+  port: 0
+spring:
+  application:
+    name: demo-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    name: mall_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_db?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true
+    username: root
+    password: ldd123789dd
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      auto-commit: true
+      idle-timeout: 60000
+      pool-name: hikariCP
+      max-lifetime: 30000
+      connection-test-query: SELECT 1
